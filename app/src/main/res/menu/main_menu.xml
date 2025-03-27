@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single"/>
+    <item
+        android:id="@+id/nav_all_movies"
+        android:title="@string/all_movies_label_menu"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:title="@string/your_favorites_label_menu"
+        android:icon="@drawable/baseline_favorite_24"/>
+
+    <item
+        android:id="@+id/nav_genres"
+        android:title="@string/your_mood_label_menu"
+        android:icon="@drawable/baseline_emoji_emotions_24"/>
+
+
+    <group/>
+
+</menu>

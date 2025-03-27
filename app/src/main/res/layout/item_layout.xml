@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_item_movie_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/item_movie_image"
+            android:src="@drawable/movie_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_item_movie_image"
+            app:layout_constraintEnd_toStartOf="@id/ll_icons"
+            app:layout_goneMarginStart="50dp">
+
+            <TextView
+                android:id="@+id/tv_item_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:text="@string/movie_title_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_movie_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/movie_genre_label" />
+
+
+            <RatingBar
+                android:id="@+id/rb_item_movie_rating"
+                style="@android:style/Widget.Holo.Light.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+     >
+
+            <ImageButton
+                android:id="@+id/ib_item_edit_"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@string/edit_movie_bt"
+                android:src="@drawable/baseline_edit_24" />
+
+            <ImageButton
+                android:id="@+id/ib_item_favorite_"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@string/like_movie"
+                android:src="@drawable/baseline_favorite_border_24" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

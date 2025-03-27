@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/allItemsFragment2">
+
+    <action
+        android:id="@+id/action_global_favoriteMovieFragment"
+        app:destination="@id/favoriteMovieFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+
+    <action
+        android:id="@+id/action_global_allItemsFragment2"
+        app:destination="@id/allItemsFragment2"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+
+    <action
+        android:id="@+id/action_global_genreMoodFragment"
+        app:destination="@id/genreMoodFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+
+    <fragment
+        android:id="@+id/allItemsFragment2"
+        android:name="com.example.reelygoodmovies.ui.all_movies.AllItemsFragment"
+        android:label="all_items_layout"
+        tools:layout="@layout/all_items_layout" >
+        <action
+            android:id="@+id/action_allItemsFragment2_to_addOrEditItemFragment"
+            app:destination="@id/addOrEditItemFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_allItemsFragment2_to_trailerFragment"
+            app:destination="@id/trailerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_allItemsFragment2_to_detailedItemFragment"
+            app:destination="@id/detailedItemFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOrEditItemFragment"
+        android:name="com.example.reelygoodmovies.ui.add_edit_movie.AddOrEditItemFragment"
+        android:label="add_item_layout"
+        tools:layout="@layout/add_item_layout" >
+        <action
+            android:id="@+id/action_addOrEditItemFragment_to_allItemsFragment2"
+            app:destination="@id/allItemsFragment2"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/allItemsFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addOrEditItemFragment_to_favoriteMovieFragment"
+            app:destination="@id/favoriteMovieFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailedItemFragment"
+        android:name="com.example.reelygoodmovies.ui.detail_movie.DetailedItemFragment"
+        android:label="detailed_item_layout"
+        tools:layout="@layout/detailed_item_layout" >
+        <action
+            android:id="@+id/action_detailedItemFragment_to_allItemsFragment2"
+            app:destination="@id/allItemsFragment2"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/allItemsFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailedItemFragment_to_addOrEditItemFragment"
+            app:destination="@id/addOrEditItemFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_detailedItemFragment_to_favoriteMovieFragment"
+            app:destination="@id/favoriteMovieFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"/>
+        <action
+            android:id="@+id/action_detailedItemFragment_to_genreMoodFragment"
+            app:destination="@id/favoriteMovieFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteMovieFragment"
+        android:name="com.example.reelygoodmovies.ui.favorite_movies.FavoriteMovieFragment"
+        android:label="FavoriteMovieFragment"
+        tools:layout="@layout/favorite_layout">
+        <action
+            android:id="@+id/action_favoriteMovieFragment_to_detailedItemFragment"
+            app:destination="@id/detailedItemFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_favoriteMovieFragment_to_addOrEditItemFragment"
+            app:destination="@id/addOrEditItemFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/genreMoodFragment"
+        android:name="com.example.reelygoodmovies.ui.filter_genre_movies.GenreMoodFragment"
+        android:label="GenreMoodFragment"
+        tools:layout="@layout/genre_mood_filter_layout"/>
+    <action
+        android:id="@+id/action_genreMoodFragment_to_detailedItemFragment"
+        app:destination="@id/detailedItemFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <fragment
+        android:id="@+id/trailerFragment"
+        android:name="com.example.reelygoodmovies.ui.trailer_movie.TrailerFragment"
+        android:label="TrailerFragment"
+        tools:layout="@layout/trailer_layout"/>
+    <action
+        android:id="@+id/action_trailerFragment_to_allItemsFragment2"
+        app:destination="@id/allItemsFragment2"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right"
+        app:popEnterAnim="@anim/from_right"
+        app:popExitAnim="@anim/to_left"
+        app:popUpTo="@id/allItemsFragment2"
+        app:popUpToInclusive="true" />
+</navigation>

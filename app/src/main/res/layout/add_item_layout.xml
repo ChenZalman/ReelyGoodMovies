@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.add_edit_movie.AddOrEditItemFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_movie_info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="@string/movie_info"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/tv_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:autofillHints=""
+                android:hint="@string/movie_name_label"
+                android:inputType="text"
+                android:background="@android:drawable/edit_text"
+                android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_genre_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/genre_label"
+            android:textSize="16sp" />
+
+        <GridLayout
+            android:id="@+id/gl_genre_choices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:columnCount="3"
+            android:rowCount="4">
+
+            <CheckBox
+                android:id="@+id/checkbox_comedy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comedy_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/family_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_drama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drama_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_horror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horror_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_thriller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thriller_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_scienceFiction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/science_fiction_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_romance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/romance_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_adventure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adventure_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_war"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/war_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/animation_label"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_doco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/doco_label"
+                android:textSize="14sp" />
+        </GridLayout>
+
+        <EditText
+            android:id="@+id/et_movie_plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:gravity="top|start"
+            android:hint="@string/plot_label"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="5"
+            android:textSize="16sp"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_movie_length"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_movie_length_label"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:paddingBottom="8dp"
+                android:text="@string/movie_length_label"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/np_hours_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8" />
+
+                <TextView
+                    android:id="@+id/tv_hours_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/hours_label"
+                    android:textSize="14sp" />
+
+                <NumberPicker
+                    android:id="@+id/np_minutes_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8" />
+
+                <TextView
+                    android:id="@+id/tv_minutes_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/minutes_label"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_movie_year_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/movie_year_label"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_select_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/calendar_year_icon"
+                android:scaleType="fitCenter"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@drawable/calendar_year_icon" />
+
+            <TextView
+                android:id="@+id/tv_selected_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/selected_year_label"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_movie_rate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_rate_label"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/rb_movie_rating"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:stepSize="1" />
+
+            <ImageButton
+                android:id="@+id/ib_item_favorite_"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@string/like_movie"
+                android:src="@drawable/baseline_favorite_border_24"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_movie_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_movie_image_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="40dp"
+                android:text="@string/movie_image_label"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_selected_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/movie_photo"
+                android:src="@drawable/movie_picture" />
+
+            <ImageButton
+                android:id="@+id/btn_add_photo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:contentDescription="@string/add_photo_icon"
+                android:scaleType="fitCenter"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@drawable/baseline_add_photo_alternate_24" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/black"
+            android:elevation="4dp"
+            android:text="@string/add_movie_label"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+</ScrollView>

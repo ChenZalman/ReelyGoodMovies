@@ -1,0 +1,4 @@
+<resources>
+    <style name="Base.Theme.IncredibleMovieInfoApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </style>
+</resources>
